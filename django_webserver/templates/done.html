@@ -1,0 +1,38 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+    <title>IoT Course Project</title>
+</head>
+
+<body>
+<div class="form-group">
+    <span>Time On (ms)</span>
+    <input disabled class="form-field" type="text" , value="{{ on_time }}">
+</div>
+<div class="form-group">
+    <span>Time Off (ms)</span>
+    <input disabled class="form-field" type="text" , value="{{ off_time }}">
+</div>
+<div class="form-group">
+    <a href="{{ request.META.HTTP_REFERER|escape }}" style="display: block;
+    text-align: center;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    color: var(--input-background);
+    border: 1px solid var(--input-background);
+    background: #d64541;
+">
+        Back to Main Page
+    </a>
+</div>
+</body>
+
+</html>
